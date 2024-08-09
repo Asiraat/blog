@@ -2,6 +2,14 @@ import os
 import yaml
 from datetime import datetime
 
+def parse_date(date_str):
+    if isinstance(date_str, datetime):
+        return date_str
+    try:
+        return datetime.strptime(date_str, '%Y-%m-%d')
+    except ValueError:
+        return datetime.now()
+
 def get_metadata(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read().split('---', 2)
@@ -18,14 +26,15 @@ def generate_blog_list():
             file_path = os.path.join(blog_dir, filename)
             metadata = get_metadata(file_path)
             if metadata:
+                date = parse_date(metadata.get('date', datetime.now()))
                 posts.append({
                     'title': metadata.get('title', 'Untitled'),
-                    'date': metadata.get('date', datetime.now()).strftime('%Y-%m-%d'),
+                    'date': date.strftime('%Y-%m-%d'),
                     'tags': metadata.get('tags', []),
                     'url': f'/posts/{os.path.splitext(filename)[0]}/'
                 })
 
-    posts.sort(key=lambda x: x['date'], reverse=True)
+    posts.sort(key=lambda x: datetime.strptime(x['date'], '%Y-%m-%d'), reverse=True)
 
     with open('content/blog-list.md', 'w', encoding='utf-8') as f:
         f.write('---\n')
