@@ -1,4 +1,4 @@
-baseURL = "https://Asiraat.github.io/"
+baseURL = "https://Asiraat.github.io/blog"
 languageCode = "ja-jp"
 title = "My Blog"
 theme = "ananke"
