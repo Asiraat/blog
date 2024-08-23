@@ -1,0 +1,118 @@
+# _config.yml
+title: My Blog
+description: A simple blog generated with Jekyll
+baseurl: "/blog"
+url: "https://asiraat.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Front matter defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      
+# Custom collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# _layouts/default.html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ "/" | relative_url }}">ろうそく</a>
+        </nav>
+        <img src="{{ "/assets/images/header.jpg" | relative_url }}" alt="header image">
+    </header>
+    
+    <main>
+        {{ content }}
+    </main>
+    
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    </footer>
+</body>
+</html>
+
+# _layouts/post.html
+---
+layout: default
+---
+<article class="post">
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
+    {{ content }}
+    {% if page.tags %}
+    <p class="post-tags">
+        Tags: {{ page.tags | join: ", " }}
+    </p>
+    {% endif %}
+</article>
+
+# index.html
+---
+layout: default
+---
+<h1>最新の投稿</h1>
+{% for post in site.posts %}
+<article>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+    {{ post.excerpt }}
+    <a href="{{ post.url | relative_url }}">続きを読む</a>
+</article>
+{% endfor %}
+
+# assets/css/main.scss
+---
+---
+@import "minima";
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-tags {
+    font-style: italic;
+}
