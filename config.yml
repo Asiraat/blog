@@ -1,6 +1,6 @@
 # _config.yml
-title: My Blog
-description: A simple blog generated with Jekyll
+title: ろうそく
+description: ぶろぐさいと！
 baseurl: "/blog"
 url: "https://asiraat.github.io"
 
@@ -38,7 +38,7 @@ collections:
         <nav>
             <a href="{{ "/" | relative_url }}">ろうそく</a>
         </nav>
-        <img src="{{ "/assets/images/header.jpg" | relative_url }}" alt="header image">
+        <img src="{{ "/assets/images/header.png" | relative_url }}" alt="header image">
     </header>
     
     <main>
