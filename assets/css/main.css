@@ -1,0 +1,26 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 1rem 0;
+    text-align: center;
+}
