@@ -1,13 +1,14 @@
 ---
 layout: default
+title: ろうそく
 ---
-<article class="post">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
-    {{ content }}
-    {% if page.tags %}
-    <p class="post-tags">
-        Tags: {{ page.tags | join: ", " }}
-    </p>
-    {% endif %}
+
+<h1>Latest Posts</h2>
+{% for post in site.posts %}
+<article>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+    {{ post.excerpt }}
+    <a href="{{ post.url | relative_url }}">続きを読む</a>
 </article>
+{% endfor %}
