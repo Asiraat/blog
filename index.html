@@ -1,8 +1,12 @@
----
-layout: default
-title: ろうそく
----
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+　<meta charset="utf-8">
+　<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+　<meta name="viewport" content="width=device-width, initial-scale=1.0">
+　<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="icon" href="https://Asiraat.github.io/picture/basic/favicon.ico">
+    
 <h1>Latest Posts</h2>
 {% for post in site.posts %}
 <article>
