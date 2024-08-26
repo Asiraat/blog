@@ -119,6 +119,8 @@ body {
 
 .blog-post {
   margin-bottom: 2em;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 .post-header {
