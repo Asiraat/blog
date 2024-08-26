@@ -106,7 +106,15 @@ body {
 
 //追加
 .blogs {
-  width: 70%;
+    max-width: 70%;
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    .blogs {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
 }
 
 .blog-post {
