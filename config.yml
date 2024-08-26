@@ -25,25 +25,25 @@ collections:
     output: true
     permalink: /:year/:month/:day/:title/
 
-# _layouts/default.html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="{{ "/" | relative_url }}">ろうそく</a>
-        </nav>
-        <img src="{{ "/assets/images/header.png" | relative_url }}" alt="header image">
-    </header>
+    <div class="top-bar">
+     <p class="top-bar-text">
+       <a href="{{ '/' | relative_url }}" class="custom-link">{{ site.title }}</a>
+     </p>
+    </div>
     
-    <main>
+    <div class="content">
         {{ content }}
-    </main>
+    </div>
     
     <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
