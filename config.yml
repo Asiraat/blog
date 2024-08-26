@@ -52,20 +52,7 @@ collections:
 </html>
 
 # _layouts/post.html
----
-layout: default
----
-<article class="post">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
-    {{ content }}
-    {% if page.tags %}
-    <p class="post-tags">
-        Tags: {{ page.tags | join: ", " }}
-    </p>
-    {% endif %}
-</article>
-
+#消して別フォルダに移行
 
 # assets/css/main.scss
 ---
