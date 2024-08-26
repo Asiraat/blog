@@ -104,11 +104,7 @@ body {
     }
 }   
 
-//追加
-.blogs {
-    max-width: 70%;
-    margin: 0 auto; 
-}
+#ここからブログコンテンツ
 
 .blog-post {
   margin-bottom: 2em;
@@ -143,6 +139,10 @@ body {
   color: #666;
   font-size: 0.9em;
   margin-bottom: 1em;
+}
+
+.post-excerpt a {
+  color: 000;
 }
 
 .post-content img {
