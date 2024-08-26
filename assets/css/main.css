@@ -110,17 +110,16 @@ body {
     margin: 0 auto; 
 }
 
-@media (max-width: 768px) {
-    .blogs {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-}
-
 .blog-post {
   margin-bottom: 2em;
   max-width: 70%;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .blog-post {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
 }
 
 .post-header {
