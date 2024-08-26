@@ -9,12 +9,14 @@ layout: default
 </div>
 
 <article class="post">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
-    {{ content }}
-    {% if page.tags %}
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
+  {% if page.tags %}
     <p class="post-tags">
-        Tags: {{ page.tags | join: ", " }}
+      タグ: {{ page.tags | join: ", " }}
     </p>
-    {% endif %}
+  {% endif %}
+  <div class="post-content">
+    {{ content }}
+  </div>
 </article>
