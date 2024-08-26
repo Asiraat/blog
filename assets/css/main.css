@@ -54,7 +54,7 @@ body {
 }
 
 .content {
-  margin-top: 100px; /* トップバーの高さ + 余白 */
+  margin-top: 100px; 
 }
 .image-container {
   position: relative;
