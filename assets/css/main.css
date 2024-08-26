@@ -144,6 +144,13 @@ body {
   margin-bottom: 1em;
 }
 
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
 .read-more {
   display: inline-block;
   margin-top: 1em;
