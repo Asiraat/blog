@@ -1,14 +1,45 @@
-  
 ---
 layout: default
-title: ろうそく
 ---
-<h1>Latest Posts</h2>
-{% for post in site.posts %}
-<article>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-    {{ post.excerpt }}
-    <a href="{{ post.url | relative_url }}">続きを読む</a>
-</article>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }} | ブログ</title>
+  <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+<body>
+    <div class="top-bar">
+     <p class="top-bar-text">
+       <a href="{{ '/' | relative_url }}" class="custom-link">{{ site.title }}</a>
+     </p>
+    </div>
+    <div class="content">
+        <div class="image-container">
+           <img src="{{ '/assets/images/blog-pic.avif' | relative_url }}" alt="ブログトップ画像">
+              <div class="image-text">
+                <div class="main-text">こいらっくの部屋</div>
+                <div class="sub-text">書く、これしか出来ないから。</div>
+            </div>
+        </div>
+
+        <div class="blogs">
+          {% for post in site.posts %}
+            <article class="blog-post">
+              <div class="post-header">
+                <h2><a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a></h2>
+                {% if post.tags %}
+                  <p class="post-tags">{{ post.tags | join: ", " }}</p>
+                {% endif %}
+              </div>
+              <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+              <p>{{ post.excerpt }}</p>
+              <a href="{{ post.url | relative_url }}" class="read-more">続きを読む</a>
+            </article>
+          {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
