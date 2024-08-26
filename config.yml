@@ -25,32 +25,7 @@ collections:
     output: true
     permalink: /:year/:month/:day/:title/
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-</head>
-<body>
-    <div class="top-bar">
-     <p class="top-bar-text">
-       <a href="{{ '/' | relative_url }}" class="custom-link">{{ site.title }}</a>
-     </p>
-    </div>
-    
-    <div class="content">
-        {{ content }}
-    </div>
-    
-    <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
-    </footer>
-</body>
-</html>
-
+# _layouts/default.html
 # _layouts/post.html
 #消して別フォルダに移行
 
