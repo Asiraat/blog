@@ -105,6 +105,10 @@ body {
 }   
 
 #ここからブログコンテンツ
+.blogs {
+  max-width: 70%;
+  margin: 0 auto;
+}
 
 .blog-post {
   margin-bottom: 2em;
