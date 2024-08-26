@@ -4,6 +4,10 @@ description: ぶろぐさいと！
 baseurl: "/blog"
 url: "https://asiraat.github.io"
 
+# Excerpt settings
+excerpt_separator: <!--more-->
+excerpt_length: 150
+
 # Build settings
 markdown: kramdown
 theme: minima
