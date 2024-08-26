@@ -66,19 +66,6 @@ layout: default
     {% endif %}
 </article>
 
-# index.html
----
-layout: default
----
-<h1>最新の投稿</h1>
-{% for post in site.posts %}
-<article>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-    {{ post.excerpt }}
-    <a href="{{ post.url | relative_url }}">続きを読む</a>
-</article>
-{% endfor %}
 
 # assets/css/main.scss
 ---
