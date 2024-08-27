@@ -36,12 +36,11 @@ layout: default
               </div>
               <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
                 <div class="post-excerpt">
-                  {% if post.content contains site.excerpt_separator %}
-                    {{ post.content | split: site.excerpt_separator | first }}
-                  {% else %}
-                    {{ post.content | strip_html | custom_excerpt: 50 }}
-                {% endif %}
-              </div>
+              
+  {{ post.content | strip_html | custom_excerpt: 50 }}
+</div>
+
+
               <a href="{{ post.url | relative_url }}" class="read-more">続きを読む</a>
             </article>
           {% endfor %}
