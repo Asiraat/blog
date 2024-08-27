@@ -166,3 +166,8 @@ body {
 .read-more:hover {
   text-decoration: underline;
 }
+
+a.blog-link {
+    color: black;
+    text-decoration-color: black;
+}
