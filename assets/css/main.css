@@ -59,7 +59,7 @@ body {
 .image-container {
   position: relative;
   width: 90%;
-  margin: 0 auto 20px;
+  margin: 0 auto 40px;
   max-height: 400px;
   overflow: hidden;
 }
