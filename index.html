@@ -36,11 +36,9 @@ layout: default
               </div>
 <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
 <div class="post-excerpt">
-     {% if post.excerpt %}
-       {{ post.excerpt | strip_html | truncate: site.excerpt_length, "..." }}
-     {% else %}
-       {{ post.content | strip_html | truncate: 150, "..." }}
-     {% endif %}
+        {% assign words = post.content | strip_html | split: ' ' %}
+        {% assign excerpt_words = words | slice: 0, 50 | join: ' ' %}
+        {{ excerpt_words }}{% if words.size > 50 %}...{% endif %}
 </div>
       <a href="{{ post.url | relative_url }}" class="read-more">続きを読む</a>
             </article>
