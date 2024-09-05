@@ -34,14 +34,15 @@ layout: default
                   <p class="post-tags">{{ post.tags | join: ", " }}</p>
                 {% endif %}
               </div>
-              <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-                <div class="post-excerpt">
-              
-  {{ post.content | strip_html | custom_excerpt: 50 }}
+<p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+<div class="post-excerpt">
+     {% if post.excerpt %}
+       {{ post.excerpt | strip_html | truncate: site.excerpt_length, "..." }}
+     {% else %}
+       {{ post.content | strip_html | truncate: 150, "..." }}
+     {% endif %}
 </div>
-
-
-              <a href="{{ post.url | relative_url }}" class="read-more">続きを読む</a>
+      <a href="{{ post.url | relative_url }}" class="read-more">続きを読む</a>
             </article>
           {% endfor %}
         </div>
