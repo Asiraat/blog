@@ -55,6 +55,7 @@ body {
 
 .content {
   margin-top: 100px; 
+  margin-bottom: 5em;
 }
 .image-container {
   position: relative;
@@ -153,6 +154,7 @@ body {
   width: 70%;
   margin: 0 auto;
   line-height: 1.6;
+  margin-bottom: 2em;
 }
 
 @media (max-width: 768px) {
