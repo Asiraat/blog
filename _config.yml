@@ -10,7 +10,6 @@ excerpt_length: 150
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
@@ -34,38 +33,3 @@ collections:
 #消して別フォルダに移行
 
 # assets/css/main.scss
----
----
-@import "minima";
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-header {
-    background-color: #f8f8f8;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.post-meta {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.post-tags {
-    font-style: italic;
-}
