@@ -16,14 +16,15 @@ layout: default
     </div>
 </div>
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-  <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
-  {% if page.tags %}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%Y-%m-%d" }}</p>
+    {% if page.tags %}
     <p class="post-tags">
       タグ: {{ page.tags | join: ", " }}
     </p>
-  {% endif %}
+    {% endif %}
+  </header>
 
   <div class="line-under-meta"></div>
     
