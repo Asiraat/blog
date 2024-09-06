@@ -149,6 +149,18 @@ body {
   color: 000;
 }
 
+.post-content {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .post-content {
+    width: 90%;
+  }
+}
+
 .post-content img {
   max-width: 100%;
   height: auto;
