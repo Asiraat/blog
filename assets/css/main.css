@@ -192,3 +192,9 @@ a.blog-link {
   background-color: #888;
   margin: 20px auto 30px;
 }
+
+@media (max-width: 768px) {
+  .line-under-meta {
+    width: 90%;
+  }
+}
