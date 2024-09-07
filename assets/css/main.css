@@ -294,14 +294,15 @@ span {
 }
 
 /* 脚注の色 */
-a.footnote-ref {
+a.footnote {
     color: #AAD6EC;
     text-decoration: none;
 }
-a.footnote-ref:visited {
+a.footnote:visited {
     color: #AAD6EC;
 }
-a.footnote-ref:hover,
-a.footnote-ref:focus {
+a.footnote:hover,
+a.footnote:focus {
     color: #AAD6EC;
+    text-decoration: none;
 }
