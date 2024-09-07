@@ -198,3 +198,42 @@ a.blog-link {
     width: 90%;
   }
 }
+
+span {
+  font-family: 'mamelon3.5', Arial, sans-serif;
+}
+
+.top-button-container {
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ff7f7e;
+    font-family: Arial, sans-serif;
+}
+.circle-button {
+    width: 20px;
+    height: 20px;
+    background-color: #ff7f7e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.arrow {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.top-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .top-button-container {
+        left: 15%;
+    }
+}
