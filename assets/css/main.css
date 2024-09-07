@@ -150,13 +150,13 @@ body {
 .post-title {
   color: black;
   text-decoration: none;
-  background: linear-gradient(currentcolor, currentcolor) left bottom / 100% 3px no-repeat,
+  background: linear-gradient(currentcolor, currentcolor) left bottom / 100% 2px no-repeat,
 		linear-gradient(#f6d893, #f6d893) right 60% / 0 .8em no-repeat;
   transition: background-size .4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .post-title:hover {
   background-position: right bottom, left 60%;
-  background-size: 0 1px, 100% .8em;
+  background-size: 0 2px, 100% .8em;
 }
 
 .post-title2 {
