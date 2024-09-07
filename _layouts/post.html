@@ -40,3 +40,20 @@ layout: default
         <span class="top-text">Top</span>
   </a>
 </article>
+
+/* Rubyで追加した特殊記法 */
+{% if page.layout == "post" %}
+<style>
+  .post-content code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: inherit;
+  }
+
+  .post-content .big-text {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+</style>
+{% endif %}
