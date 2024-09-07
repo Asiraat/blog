@@ -204,7 +204,7 @@ span {
 }
 
 .top-button-container {
-    position: fixed;
+    position: relative;
     top: 20px;
     left: 5%;
     display: flex;
