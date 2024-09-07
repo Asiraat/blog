@@ -70,7 +70,7 @@ body {
   display: block;
 }
 #PCは画像横幅狭く
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .image-container {
   position: relative;
   width: 70%;
