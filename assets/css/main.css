@@ -69,6 +69,16 @@ body {
   height: auto;
   display: block;
 }
+#PCは画像横幅狭く
+@media (max-width: 768px) {
+  .image-container {
+  position: relative;
+  width: 70%;
+  margin: 0 auto 40px;
+  max-height: 400px;
+  overflow: hidden;
+  }
+}
 .image-text {
   position: absolute;
   top: 50%;
@@ -236,4 +246,18 @@ span {
     .top-button-container {
         left: 15%;
     }
+}
+
+.line-under-blog {
+  width: 70vw;
+  height: 1px;
+  background-color: #888;
+  margin: 20px auto 20px;
+}
+
+@media (max-width: 768px) {
+  .line-under-blog {
+    width: 90%;
+    margin-top: 2em;
+  }
 }
