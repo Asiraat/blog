@@ -72,11 +72,7 @@ body {
 #PCは画像横幅狭く
 @media (min-width: 768px) {
   .image-container {
-  position: relative;
   width: 70%;
-  margin: 0 auto 40px;
-  max-height: 400px;
-  overflow: hidden;
   }
 }
 .image-text {
@@ -139,6 +135,17 @@ body {
 }
 
 .post-title {
+  color: black;
+	background: linear-gradient(currentcolor, currentcolor) left bottom / 100% 1px no-repeat,
+		linear-gradient(#f6d893, #f6d893) right 60% / 0 .8em no-repeat;
+	transition: background-size .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.post-title:hover {
+	background-position: right bottom, left 60%;
+	background-size: 0 1px, 100% .8em;
+}
+
+.post-title2 {
   color: black;
   text-decoration: none;
 }
@@ -254,7 +261,6 @@ span {
   background-color: #888;
   margin: 20px auto 20px;
 }
-
 @media (max-width: 768px) {
   .line-under-blog {
     width: 90%;
