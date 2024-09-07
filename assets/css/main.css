@@ -295,14 +295,26 @@ span {
 
 /* 脚注の色 */
 a.footnote {
-    color: #AAD6EC;
-    text-decoration: none;
+  color: #6088C6;
+  text-decoration: none;
 }
 a.footnote:visited {
-    color: #AAD6EC;
+  color: #6088C6;
 }
 a.footnote:hover,
 a.footnote:focus {
-    color: #AAD6EC;
-    text-decoration: none;
+  color: #6088C6;
+  text-decoration: none;
+}
+a.reversefootnote {
+  color: #6088C6;
+  text-decoration: none;
+}
+a.reversefootnote:visited {
+  color: #6088C6;
+}
+a.reversefootnote:hover,
+a.reversefootnote:focus {
+  color: #6088C6;
+  text-decoration: none;
 }
