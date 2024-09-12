@@ -15,7 +15,6 @@ layout: default
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ page.image | default: site.image | relative_url }}">
-
   <!-- Twitterカード設定 -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
@@ -55,6 +54,7 @@ layout: default
                   {% else %}
                     {{ post.content }}
                   {% endif %}
+                  <p>…</p>
                 </div>
               <a href="{{ post.url | relative_url }}" class="read-more">続きを読む</a>
             </article>
