@@ -41,7 +41,7 @@ layout: default
   </a>
 </article>
 
-<!--Rubyで追加した特殊記法-->
+<!--特定のHTMLタグについての装飾-->
 {% if page.layout == "post" %}
 <style>
   .post-content code {
@@ -50,10 +50,8 @@ layout: default
     border-radius: 3px;
     font-size: inherit;
   }
-
-  .post-content .big-text {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
+  .footnotes p {
+  font-size: 0.5rem;
+}
 </style>
 {% endif %}
