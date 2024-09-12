@@ -27,9 +27,6 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:title/
-
-# _layouts/default.html
-# _layouts/post.html
-#消して別フォルダに移行
-
-# assets/css/main.scss
+    
+# OGP関連
+image: "/assets/images/og-image.png"
