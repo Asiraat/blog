@@ -9,6 +9,18 @@ layout: default
   <title>ろうそく | ブログ</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="icon" href="{{ 'assets/images/favicon.ico' | relative_url }}">
+  <!-- OGP（Open Graph Protocol）設定 -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.image | default: site.image | relative_url }}">
+
+  <!-- Twitterカード設定 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:image" content="{{ page.image | default: site.image | relative_url }}">
 </head>
 <body>
     <div class="top-bar">
