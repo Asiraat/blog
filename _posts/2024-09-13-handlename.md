@@ -2,7 +2,7 @@
 layout: post
 title: "ハンネについて"
 tags:
-  - zakkan
+  - zakkan
 date: "2024-09-13"
 ---
 
